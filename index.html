@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #042350;
+}
+
+/* header style */
+.header {
+  grid-area: header;
+  background-color: #042350;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  border-width: 20px;
+  border-style: solid;
+  border: #F65C02;
+}
+
+ul {
+  font-size: x-large;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F65C02;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #01256F;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 ( black) on hover */
+li a:hover {
+  background-color: white;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left middle middle middle middle right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px;
+  border: #042350 solid 4px;
+}
+
+/* left column style */
+.left {
+  grid-area: left;
+  color: #01256F;
+}
+
+/* middle column style */
+.middle {
+  grid-area: middle;
+  color: #01256F;
+}
+
+/* right column style */
+.right {
+  grid-area: right;
+  color: #01256F;
+}
+
+/* footer style */
+.footer {
+  grid-area: footer;
+  background-color: #042350;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* grid-container style */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="header">
+    <h2><img src="images/logo.png" alt="logo"></h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="about.html">About</a></li>
+      <li style="float: right"><a class="active" href="contact.html">Contact</a></li>
+    </ul> 
+  </div>
+  
+  <div class="left" style="background-color:white;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2958.6374489104264!2d-71.25036762340582!3d42.136644149186324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e380f0887a24f1%3A0x5bd9ccff885069ec!2sWalpole%20High%20School!5e0!3m2!1sen!2sus!4v1729013270753!5m2!1sen!2sus" width="550" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  <div class="middle" style="background-color:#F65C02;">
+    <h3> Classes Our School Offers For Electives</h3>
+    <p> Web Design<br> Ceramics<br> Computer Programming<br> Design<br> Piano<br> Orchestra<br> Forensics<br> Accounting<br> Journalism</p>
+    <a href="https://www.walpole.k12.ma.us/o/whs" target="_blank"><strong>Click here to check the Walpole High School website for more details about each class</strong></a>
+  </div>  
+  <div class="right" style="background-color:white;"><img src="images/walpolelogo.png" width="250px" height="250px" alt="walpole"></div>
+  <div class="footer" style="background-color: #042350;">
+    <p style="float: left">Walpole High School<br>
+    275 Common Street<br>
+    Walpole, MA 02081<br>
+    Phone: (508) 660-7257<br>
+    Fax: (508) 850-7958
+    </p> 
+    <p>&copy; L Sirard, WHS Web Design 2024
+      <a href="https://www.instagram.com/walpolehighschool/" target="_blank"><img src="images/instalogo.webp" width="50px" height="50px" alt="insta"></a>
+      <a href="https://x.com/i/flow/login?redirect_after_login=%2FWalpoleHS" target="_blank"><img src="images/xlogo.png" width="50px" height="50px" alt="x"></a>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
